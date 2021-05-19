@@ -32,7 +32,7 @@
                     <navigationItem key="navigationItem" id="pgm-0k-rE4">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="klP-4b-qkg">
                             <connections>
-                                <segue destination="Efd-KA-Ifz" kind="show" id="ci1-32-R3j"/>
+                                <segue destination="Efd-KA-Ifz" kind="show" identifier="juegoSegue" id="ci1-32-R3j"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -77,15 +77,28 @@
                                     <action selector="agregarTapped:" destination="Efd-KA-Ifz" eventType="touchUpInside" id="iwu-Zr-maB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pzh-zL-ydb">
+                                <rect key="frame" x="150.66666666666666" y="361" width="112.99999999999997" height="46"/>
+                                <color key="backgroundColor" red="1" green="0.45827870837673235" blue="0.41548585123541482" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
+                                <state key="normal" title="Eliminar"/>
+                                <connections>
+                                    <action selector="eliminarTapped:" destination="Efd-KA-Ifz" eventType="touchUpInside" id="MRX-t9-JuE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="cVG-Ud-mQy" firstAttribute="centerX" secondItem="Bcu-ky-nUY" secondAttribute="centerX" id="472-CT-jPO"/>
+                            <constraint firstItem="Pzh-zL-ydb" firstAttribute="top" secondItem="R9H-dj-68m" secondAttribute="bottom" constant="15" id="Csb-Nb-xds"/>
                             <constraint firstItem="qmX-Gp-DRW" firstAttribute="top" secondItem="Klb-1x-vtA" secondAttribute="top" constant="32" id="W9U-KI-E5H"/>
                             <constraint firstItem="cVG-Ud-mQy" firstAttribute="top" secondItem="qmX-Gp-DRW" secondAttribute="bottom" constant="20" id="c8x-J2-1eG"/>
                             <constraint firstItem="qmX-Gp-DRW" firstAttribute="centerX" secondItem="Bcu-ky-nUY" secondAttribute="centerX" id="jmo-3c-Lel"/>
                             <constraint firstItem="R9H-dj-68m" firstAttribute="centerX" secondItem="Bcu-ky-nUY" secondAttribute="centerX" id="knz-7c-bMP"/>
                             <constraint firstItem="cVG-Ud-mQy" firstAttribute="width" secondItem="qmX-Gp-DRW" secondAttribute="width" multiplier="0.114286" constant="248" id="lFE-4U-TJP"/>
+                            <constraint firstItem="Pzh-zL-ydb" firstAttribute="centerX" secondItem="Bcu-ky-nUY" secondAttribute="centerX" id="rFB-yW-FiE"/>
                             <constraint firstItem="R9H-dj-68m" firstAttribute="top" secondItem="cVG-Ud-mQy" secondAttribute="bottom" constant="20" id="why-iX-1Sa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Klb-1x-vtA"/>
@@ -109,6 +122,7 @@
                     <connections>
                         <outlet property="JuegoImageView" destination="qmX-Gp-DRW" id="SZJ-ky-MNg"/>
                         <outlet property="button" destination="R9H-dj-68m" id="2ZY-OE-WXn"/>
+                        <outlet property="eliminarboton" destination="Pzh-zL-ydb" id="t2O-Qk-yX0"/>
                         <outlet property="tituloTextField" destination="cVG-Ud-mQy" id="eaV-80-NQX"/>
                     </connections>
                 </viewController>
